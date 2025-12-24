@@ -42,6 +42,11 @@ const Student = db.define("student", {
   },
 });
 
+imageUrl: {
+  type: Sequelize.STRING,
+  allowNull: true,
+  defaultValue: "https://ui-avatars.com/api/?name=Student&size=300",  // Use external URL instead
+}
 
 // Export the student model
 module.exports = Student;
