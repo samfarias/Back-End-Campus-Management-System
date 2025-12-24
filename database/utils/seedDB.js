@@ -58,7 +58,7 @@ const seedDB = async () => {
 	  	lastName: "Jerico",
 	  	email:     "Sebaj@example.com",    
 	  	imageUrl:  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvGxj09OCvV9FRDSqZUsbfh7MNfCLFG8nKOw&s",    
-		gpa:       4.4  
+		gpa:       4.0
 	});
 
 	// Add students to campuses
