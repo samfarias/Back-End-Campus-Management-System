@@ -42,7 +42,10 @@ const app = express();
 
 // Allow requests from GitHub Pages frontend, but also local
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://sam-fulstack-crud-app-client-front-end-main.github.io', 'https://samfarias.github.io/Front-End-Campus-Management-System']
+  origin: [
+    'http://localhost:3000',
+    'https://samfarias.github.io'
+  ]
 }));
 
 /* SET UP ROUTES */
