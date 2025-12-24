@@ -42,7 +42,7 @@ const app = express();
 
 // Allow requests from GitHub Pages frontend, but also local
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://sam-fulstack-crud-app-client-front-end-main.github.io']
+  origin: ['http://localhost:3000', 'https://sam-fulstack-crud-app-client-front-end-main.github.io', 'https://samfarias.github.io/Front-End-Campus-Management-System']
 }));
 
 /* SET UP ROUTES */
@@ -98,12 +98,14 @@ const bootApp = async () => {
     await syncDatabase();    // Only seed locally
   } else {
     await db.sync();         // Just sync tables in production
-    await seedDB();
   }
   await configureApp();  // Start and configure Express application
   app.listen(PORT, console.log(`Server started on ${PORT}`)); // Set up express application to use port 5000 as the access point for the server application.
 };
 
 /* START THE SERVER BOOT */
-// Run the boot process to start server application
+// Finally, run the boot process to start server application
 bootApp();
+
+
+
