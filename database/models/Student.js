@@ -26,11 +26,11 @@ const Student = db.define("student", {
     validate: { isEmail: true }, // Validate email format
   },
   // Define the imageUrl field
-  imageUrl: {
-    type: Sequelize.STRING,
-    allowNull: true, // Allowing null values
-    defaultValue: "/default-student.png", // Default image URL
-  },
+ imageUrl: {
+  type: Sequelize.STRING,
+  allowNull: true,
+  defaultValue: "https://samfarias.github.io/Front-End-Campus-Management-System/default-student.png",
+},
   // Define the GPA field
   gpa: {
     type: Sequelize.DECIMAL(2, 1), // Decimal type with 2 digits before and 1 digit after the decimal point
@@ -41,12 +41,6 @@ const Student = db.define("student", {
     },
   },
 });
-
-imageUrl: {
-  type: Sequelize.STRING,
-  allowNull: true,
-  defaultValue: "https://ui-avatars.com/api/?name=Student&size=300",  // Use external URL instead
-}
 
 // Export the student model
 module.exports = Student;
